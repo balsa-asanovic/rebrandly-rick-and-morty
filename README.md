@@ -6,3 +6,6 @@ API documentation: https://rickandmortyapi.com/documentation
 
 ![1.png](https://raw.githubusercontent.com/balsa-asanovic/rebrandly-rick-and-morty/master/src/assets/RickAndMorty.jpg)
 
+# Demo
+
+https://deluxe-torte-f99f65.netlify.app/
