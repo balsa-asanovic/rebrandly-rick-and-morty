@@ -44,6 +44,12 @@
     cursor: pointer;
 }
 
+.character-location:hover {
+    background-color: gray;
+    border-radius: 5px;
+    padding: 3px;
+}
+
 .character-first-appearance-label {
     font-size: 15px;
     color: #959595;
