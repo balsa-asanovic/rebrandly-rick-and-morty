@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import './character.css';
+import LocationContext from '../../context/LocationProvider';
 
-const Character = ({ charData, setEpisodes, setCharEpisodes, setOrigin, setCharOrigin }) => {
-
-    const [locationData, setLocationData] = useState({});
+const Character = ({ charData, setEpisodes, setCharEpisodes, setOrigin, setCharOrigin, setCharLocation }) => {
     const [firstAppearance, setFirstAppearance] = useState({});
+    const { location, setLocation } = useContext(LocationContext);
 
     const handleOriginClick = () => {
         setOrigin(charData.origin.url); 
@@ -14,33 +14,32 @@ const Character = ({ charData, setEpisodes, setCharEpisodes, setOrigin, setCharO
             alert("No origin data for " + charData.name);
     };
 
+    const getLocationData = () => {
+        fetch(charData.location.url, { method: "GET"})
+          .then(data => data.json())
+          .then(data => {setLocation(data)});
+      };
+
     useEffect(() => {
-        const getLocationData = () => {
-            fetch(charData.location.url, { method: "GET"})
-              .then(data => data.json())
-              .then(data => {setLocationData(data)});
-          };
-        
         const getFirstAppearance = () => {
             fetch(charData.episode[0], { method: "GET"})
               .then(data => data.json())
               .then(data => {setFirstAppearance(data)});
           };
 
-        getLocationData();
         getFirstAppearance();
     }, [charData]);
 
     return (
         <div className="character-main">
-            <img src={charData.image} width="250" />
+            <img src={charData.image} width="250" alt={charData.name} />
             <div className="character-data">
                 <span className="character-name">{charData.name}</span> <br />
                 <span className="character-status">{charData.status}</span> - <span className="character-species">{charData.species}</span>
                 <br /> <br />
                 <span className="character-location-label">Last known location:</span>
                 <br />
-                <span className="character-location">{charData.location.name}</span>
+                <span className="character-location" onClick={() => { getLocationData(); setCharLocation(charData.name); }}>{charData.location.name}</span>
                 <br /><br />
                 <span className="character-first-appearance-label">Firs appearance:</span>
                 <br />

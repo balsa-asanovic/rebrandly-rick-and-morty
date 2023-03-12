@@ -41,6 +41,7 @@
 
 .character-location {
     font-size: 20px;
+    cursor: pointer;
 }
 
 .character-first-appearance-label {
