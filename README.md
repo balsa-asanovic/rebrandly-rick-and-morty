@@ -34,7 +34,7 @@ Link >> [Rick and Morty Demo API](https://deluxe-torte-f99f65.netlify.app/)
 
 Each character box has three buttons for additional data about its Location, Episodes and Origin.
 
-Their locations are showed on the following image:
+Button locations are showed on the following image:
 
 ![buttons.png](https://raw.githubusercontent.com/balsa-asanovic/rebrandly-rick-and-morty/master/src/assets/buttons_pic.png)
 
