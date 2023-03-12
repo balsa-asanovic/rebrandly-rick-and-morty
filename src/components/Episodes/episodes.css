@@ -1,0 +1,32 @@
+.episodes-main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    overflow: auto;
+    text-align: center;
+    background-color: #383d47;
+    border-radius: 10px;
+    padding-top: 10px;
+    z-index: 2;
+    overflow-y: scroll;
+}
+
+.episodes-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #00d60a;
+}
+
+.episodes-X {
+    margin-left: 90%;
+    color: #ea8f64;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}

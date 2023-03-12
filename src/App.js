@@ -1,23 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState, useContext } from "react";
+import Character from './components/Character/Character';
+import Episodes from './components/Episodes/Episodes';
+import Origin from './components/Origin/Origin';
+import PageBar from './components/PageBar/PageBar';
+import PageContext from './context/PageProvider';
 
-function App() {
+const App = () => {
+  const { page, setNumOfPages } = useContext(PageContext)
+  const [characters, setCharacters] = useState([]);
+  const [episodes, setEpisodes] = useState([]);
+  const [charEpisodes, setCharEpisodes] = useState("");
+  const [origin, setOrigin] = useState("");
+  const [charOrigin, setCharOrigin] = useState("");
+
+  useEffect(() => {
+    const getData = () => {
+      fetch("https://rickandmortyapi.com/api/character/?page=" + page, { method: "GET"})
+        .then(data => data.json())
+        .then(data => {setNumOfPages(data.info.pages); setCharacters(data.results)});
+    };
+
+    getData();
+  }, [page]);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-main">
+      <PageBar />
+      {episodes.length !== 0 ? <Episodes episodesList={episodes} charName={charEpisodes} setEpisodes={setEpisodes} /> : "" }
+      {origin !== "" ? <Origin url={origin} setOrigin={setOrigin} charName={charOrigin} /> : ""}
+      {characters.map((character, index) => 
+                        <Character key={index} 
+                                   charData={character} 
+                                   setEpisodes={setEpisodes} 
+                                   setCharEpisodes={setCharEpisodes} 
+                                   setOrigin={setOrigin} 
+                                   setCharOrigin={setCharOrigin} />
+                     )
+      }
+      <PageBar />
     </div>
   );
 }

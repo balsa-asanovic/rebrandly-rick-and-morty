@@ -1,0 +1,12 @@
+.page-bar {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .page-bar span {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+  }

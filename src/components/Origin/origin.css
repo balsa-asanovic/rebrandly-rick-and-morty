@@ -1,0 +1,33 @@
+.origin-main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    overflow: auto;
+    text-align: center;
+    background-color: #383d47;
+    border-radius: 10px;
+    padding-top: 10px;
+    color: white;
+    z-index: 2;
+    padding-bottom: 20px;
+    color: #00d60a;
+}
+
+.origin-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.origin-X {
+    margin-left: 90%;
+    color: #ea8f64;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+

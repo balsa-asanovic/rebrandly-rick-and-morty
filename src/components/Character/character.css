@@ -1,0 +1,67 @@
+.character-main {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px; 
+    background-color: #474f60;
+}
+
+.character-main img {
+    border-radius: 10px 0px 5px 10px;
+}
+
+
+.character-data {
+    margin-left: 10px;
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+    position: relative;
+}
+
+.character-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.character-status {
+    font-size: 13px;
+}
+
+.character-species {
+    font-size: 13px;
+}
+
+.character-location-label {
+    font-size: 15px;
+    color: #959595;
+}
+
+.character-location {
+    font-size: 20px;
+}
+
+.character-first-appearance-label {
+    font-size: 15px;
+    color: #959595;
+}
+
+.character-first-appearance {
+    font-size: 20px;
+}
+
+.character-origin {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+}
+
+.character-episodes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-right: 10px;
+}
