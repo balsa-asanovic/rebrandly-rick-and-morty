@@ -8,8 +8,6 @@ API documentation: https://rickandmortyapi.com/documentation
 
 Link >> [Rick and Morty Demo API](https://deluxe-torte-f99f65.netlify.app/)
 
-![1.png](https://raw.githubusercontent.com/balsa-asanovic/rebrandly-rick-and-morty/master/src/assets/RickAndMorty.jpg)
-
 ## Components description
 
 [App](https://github.com/balsa-asanovic/rebrandly-rick-and-morty/blob/master/src/App.js) - main component of the app, contains all other components
@@ -31,3 +29,15 @@ Link >> [Rick and Morty Demo API](https://deluxe-torte-f99f65.netlify.app/)
 [LocationProvider](https://github.com/balsa-asanovic/rebrandly-rick-and-morty/blob/master/src/context/LocationProvider.js) - Context used to hold location data about a character, so it can be accessed everywhere
 
 [PageProvider](https://github.com/balsa-asanovic/rebrandly-rick-and-morty/blob/master/src/context/PageProvider.js) - Context used to hold information about page number and total pages
+
+## Options
+
+Each character box has three buttons for additional data about its Location, Episodes and Origin.
+
+Button locations are showed on the following image:
+
+![buttons.png](https://raw.githubusercontent.com/balsa-asanovic/rebrandly-rick-and-morty/master/src/assets/buttons_pic.png)
+
+## Wubba Lubba Dub-Dub
+
+![1.png](https://raw.githubusercontent.com/balsa-asanovic/rebrandly-rick-and-morty/master/src/assets/RickAndMorty.jpg)
