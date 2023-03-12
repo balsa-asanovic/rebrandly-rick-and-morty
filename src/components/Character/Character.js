@@ -14,10 +14,16 @@ const Character = ({ charData, setEpisodes, setCharEpisodes, setOrigin, setCharO
             alert("No origin data for " + charData.name);
     };
 
-    const getLocationData = () => {
-        fetch(charData.location.url, { method: "GET"})
-          .then(data => data.json())
-          .then(data => {setLocation(data)});
+    const getLocationData = async () => {
+        const response = await fetch(charData.location.url, { method: "GET"});
+
+        try {
+            const data = await response.json();
+            setLocation(data);
+        } catch(e) {
+            setLocation(null);
+            alert("No location data for " + charData.name);
+        }
       };
 
     useEffect(() => {
