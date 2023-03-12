@@ -36,6 +36,6 @@ Each character box has three buttons for additional data about its Location, Epi
 
 Their locations are showed on the following image:
 
-
+![buttons.png](https://raw.githubusercontent.com/balsa-asanovic/rebrandly-rick-and-morty/master/src/assets/buttons_pic.png)
 
 ![1.png](https://raw.githubusercontent.com/balsa-asanovic/rebrandly-rick-and-morty/master/src/assets/RickAndMorty.jpg)
